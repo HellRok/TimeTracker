@@ -1,0 +1,13 @@
+.time {
+	width: 70px;
+	display: inline;
+}
+
+.buttons button {
+	display: none;
+	margin-right: 5px;
+}
+
+li:hover .buttons button {
+	display: inline;
+}
