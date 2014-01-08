@@ -1,0 +1,5 @@
+[/]
+	tools.staticdir.root = "/Users/Sean/Dropbox/code/Web/TimeTracker"
+[/static]
+	tools.staticdir.on = True
+	tools.staticdir.dir = "static"
