@@ -12,6 +12,11 @@ li:hover .buttons button {
 	display: inline;
 }
 
+.navbar button {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
 .heading-form {
 	display: none;
 }

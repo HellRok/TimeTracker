@@ -4,11 +4,9 @@
 		<input type="text" class="form-control input-sm time start" value="${TT.pretty_time(time.start)}" placeholder="Start" onblur="update_time(${time.rowid});">
 		<input type="text" class="form-control input-sm time end" value="${TT.pretty_time(time.end)}" placeholder="End" onblur="update_time(${time.rowid});">
 		<span class="pull-right buttons">
-			<a href="/remove/?rowid=${time.rowid}">
-				<button class="btn btn-xs btn-danger">
-					<span class="glyphicon glyphicon-minus">
-				</button>
-			</a>
+			<button class="btn btn-xs btn-danger" onclick="remove_row(${time.rowid});">
+				<span class="glyphicon glyphicon-minus">
+			</button>
 			<em>${TT.pretty_time(time.total_time())}</em>
 		<span>
 	</li>
@@ -23,21 +21,15 @@
 			<input type="text" class="form-control input-sm" value="${heading.heading}" placeholder="No Heading" onblur="update_heading(${heading.rowid});">
 		</span>
 		<span class="pull-right buttons">
-			<a href="/add_heading/?parent=${heading.rowid}&heading=New%20Heading">
-				<button class="btn btn-xs">
-					<span class="glyphicon glyphicon-list"></span>
-				</button>
-			</a>
-			<a href="/add_time/?parent=${heading.rowid}">
-				<button class="btn btn-xs">
-					<span class="glyphicon glyphicon-time"></span>
-				</button>
-			</a>
-			<a href="/remove/?rowid=${heading.rowid}">
-				<button class="btn btn-xs btn-danger">
-					<span class="glyphicon glyphicon-minus">
-				</button>
-			</a>
+			<button class="btn btn-xs" onclick='add_heading(${heading.rowid}, "New%20Heading");'>
+				<span class="glyphicon glyphicon-list"></span>
+			</button>
+			<button class="btn btn-xs" onclick='add_time(${heading.rowid});'>
+				<span class="glyphicon glyphicon-time"></span>
+			</button>
+			<button class="btn btn-xs btn-danger" onclick="remove_row(${heading.rowid});">
+				<span class="glyphicon glyphicon-minus">
+			</button>
 			<strong>${TT.pretty_time(heading.total_time())}</strong>
 		</span>
 	</li>

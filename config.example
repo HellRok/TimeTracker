@@ -1,5 +1,5 @@
 [/]
-	tools.staticdir.root = "/Users/Sean/Dropbox/code/Web/TimeTracker"
+	tools.staticdir.root = "/path/to/TimeTracker"
 [/static]
 	tools.staticdir.on = True
 	tools.staticdir.dir = "static"

@@ -11,12 +11,10 @@
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="navbar-header">
 				<span class="navbar-brand">Time Tracker</span>
-				<a href="/add_heading/?heading=New%20Heading">
-					<button class="btn btn-xs">
-						<span class="glyphicon glyphicon-list"></span>
-					</button>
-				</a>
 			</div>
+			<button class="btn btn-xs" onclick="add_heading(null, 'New Heading');">
+				<span class="glyphicon glyphicon-list"></span> Add top level heading
+			</button>
 		</nav>
 		<ul id="TimeTrackerContainer" class="list-group">
 			<%include file="body.mako" />
