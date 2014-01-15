@@ -12,7 +12,10 @@ li:hover .buttons button {
 	display: inline;
 }
 
-.navbar button {
+.navbar-header button {
+	position: absolute;
+	top: 0px;
+	right: 5px;
 	font-size: 16px;
 	margin-top: 10px;
 }

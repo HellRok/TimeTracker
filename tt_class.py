@@ -17,7 +17,7 @@ class tt_class():
 	
 	def get_headings(self):
 		self.headings = []
-		cursor.execute("SELECT ROWID, parent, heading FROM TimeTracker WHERE parent IS NULL;")
+		cursor.execute("SELECT ROWID, parent, heading FROM TimeTracker WHERE parent IS NULL ORDER BY rowid DESC;")
 		results = cursor.fetchall()
 		for result in results:
 			self.headings.append(heading_class(result[0], result[2]))
