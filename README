@@ -1,0 +1,8 @@
+Make sure you have python3 with cherrypy and mako.
+	- "easyinstall3 cherrypy mako" should do it
+
+You'll want to "cp config.example config" and
+set it up accordingly.
+
+To run just ./server.py and then go to localhost:8080 in
+your browser.
