@@ -11,14 +11,20 @@
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header">
         <span class="navbar-brand">Time Tracker</span>
-        <button class="btn btn-xs" onclick="add_heading(null, 'New Heading');">
-          <span class="glyphicon glyphicon-list"></span> Add top level heading
-        </button>
       </div>
     </nav>
-    <ul id="TimeTrackerContainer" class="list-group">
-      <%include file="body.mako" />
+
+    <ul>
+      % for heading in TT.headings:
+        <li>${heading.heading}</li>
+        <ul>
+          <li>Total: ${TT.pretty_time(heading.total_time())}</li>
+          <li>Break: ${TT.pretty_time(heading.get_break_time())}</li>
+          <li>Start: ${TT.pretty_time(heading.get_all_times()[0].start)}</li>
+          <li>End: ${TT.pretty_time(heading.get_all_times()[-1].end)}</li>
+        </ul>
+      % endfor
     </ul>
-    <script src="/static/TimeTracker.js"></script>
   </body>
 </html>
+
