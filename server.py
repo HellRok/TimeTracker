@@ -37,7 +37,6 @@ class Server(object):
   add_time.exposed = True
 
   def update_time(self, rowid, start=None, end=None):
-    print(start, end)
     if start:
       start_minutes = int(start.split(":")[0])*60+int(start.split(":")[1])
     else:
@@ -46,7 +45,6 @@ class Server(object):
       end_minutes = int(end.split(":")[0])*60+int(end.split(":")[1])
     else:
       end_minutes = 0
-    print(start_minutes, end_minutes)
     TT.update_time(rowid, start_minutes, end_minutes)
     TT.get_headings()
     t = lookup.get_template("body.mako")
